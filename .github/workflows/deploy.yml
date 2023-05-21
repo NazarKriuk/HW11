@@ -17,10 +17,13 @@ jobs:
           npm run build
 
       - name: Save state
-        run: echo "${name}=${value}" >> $GITHUB_ENV
+        run: |
+          echo "MY_STATE=some-value" >> $GITHUB_ENV
 
       - name: Set output
-        run: echo "::set-output name={name}::{value}"
+        id: build-and-deploy
+        run: |
+          echo "::set-output name=myOutput::some-value"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
