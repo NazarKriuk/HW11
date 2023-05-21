@@ -9,13 +9,13 @@ body {
   background-color: #eee;
 }
 .start-page {
-  height: 50vh;
+  height: 51vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .start-page-text {
-  max-width: 330px;
+  max-width: 331px;
   text-align: center;
   font-size: 28px;
   line-height: 1.3;
